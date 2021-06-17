@@ -1,1 +1,207 @@
 /*  Add your styling here */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/* section 1 top header   */
+
+.top {
+  display: flex;
+  flex-wrap: warp;
+  background-color: #e76f51;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  padding: 25px;
+}
+.logo a img {
+  height: 50px;
+  max-width: 100%;
+}
+.slogo {
+  display: flex;
+  align-items: flex-end;
+}
+p {
+  font-size: 16px;
+}
+.logo {
+  flex: 1;
+}
+
+.toggle {
+  order: 2;
+}
+/* Navbar Toggle */
+/* mobile menu  */
+.menubar {
+  background: black;
+  display: inline-block;
+  height: 2px;
+  position: relative;
+  width: 18px;
+}
+.menubar::before,
+.menubar::after {
+  background: black;
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all 0.2s ease-out;
+  width: 100%;
+}
+.menubar:before {
+  top: 5px;
+}
+.menubar:after {
+  top: -5px;
+}
+
+/* section 2 for tablet and desktop*/
+.menu {
+  display: none;
+}
+
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+.menu > li {
+  font-size: 16px;
+  padding: 15px 5px;
+  text-transform: uppercase;
+}
+.menu li a {
+  display: block;
+}
+
+/* section 3 welcome */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+
+  margin: 10px;
+}
+
+.box {
+  width: 100%;
+}
+.cake1 {
+  background-color: #ef476f;
+  order: 1;
+}
+
+.Welcome {
+  background-color: #ef476f;
+  padding-bottom: 20px;
+}
+/* section 4 */
+
+.container2 {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1024px;
+  margin: auto;
+}
+.box2 {
+  width: 50%;
+  background-color: #ef476f;
+}
+.box2 img {
+  width: 100%;
+  object-fit: cover;
+}
+
+/* section 5 footer */
+footer {
+  background-color: #004658;
+  padding: 20px;
+  margin-top: 20px;
+}
+.footer-copyright-text {
+  color: #fff;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 18px;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.footer-copyright-link {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Tablet menu */
+@media all and (min-width: 540px) {
+  .menu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #2a9d8f;
+    margin: 10px;
+    padding: 10px;
+  }
+  .item {
+    margin: 5px 20px;
+    background-color: #264653;
+    width: auto;
+    display: block;
+  }
+  .toggle {
+    display: none;
+  }
+  .menu li {
+    padding: 5px 10px;
+  }
+}
+
+/* Desktop menu */
+@media all and (min-width: 900px) {
+  .menu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #2a9d8f;
+    margin: 20px;
+    padding: 15px;
+  }
+
+  .logo {
+    order: 0;
+  }
+  .item {
+    order: 1;
+  }
+
+  .menu li {
+    padding: 10px 15px;
+  }
+  .cake1 {
+    width: 50%;
+    order: 0;
+  }
+  .Welcome {
+    width: 50%;
+  }
+  .Welcome h1 {
+    text-align: right;
+    padding-right: 30px;
+  }
+  .Welcome p {
+    text-align: right;
+    padding-right: 30px;
+  }
+  .box2 {
+    width: 25%;
+    align-content: stretch;
+  }
+}
